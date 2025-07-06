@@ -19,10 +19,10 @@
                         <label for="ta-players">*Players</label>
                         <select id="theme-select" onchange="selectTheme()">
                             <!-- ADD NEW THEMES FROM THE CSS FILE HERE -->
-                            <option value="will-theme">Will</option>
+                            <option value="will-theme" selected>Will</option>
                             <option value="cameron-theme">Cameron</option>
                             <option value="creasman-theme">Nick C</option>
-                            <option value="schultz-theme" selected>Nick S</option>
+                            <option value="schultz-theme">Nick S</option>
                             <option value="matrix-theme">I know Kung Fu</option>
                         </select>
                     </div>
@@ -50,6 +50,52 @@
         <div id="parking-lot">
             <label for="ta-parking-lots">Parking Lot Items</label>
             <textarea id="ta-parking-lots" name="ta-parking-lots" rows="8" cols="30" placeholder="Player 1 - ...\nPlayer 2 - ..." spellcheck="false"></textarea>
+        </div>
+    </div>
+    <div id="game-hints">
+        <button id="hint-button" onclick="showHideDescription()">Show Description</button>
+        <div class="box-text" id="hint-content">
+            <h2>This is a standup helper.</h3>
+            <p>You can use it to pick random team members to give their update during a daily standup, roundtable discussion, icebreaker, whatever you want!</p>
+            <h3>Players:</h3>
+            <ul>
+                <li>All people listed in the players section will be randomized and one by one will be selected to give their update.</li>
+                <li>List each player on their own line in the input text area.</li>
+            </ul>
+            <h3>Final Round:</h3>
+            <ul>
+                <li>Anyone placed in the final round section will not be on deck until all the players have gone.</li>
+                <li>This is ususally a good place for managers and directors, or anyone you want to go last.</li>
+            </ul>
+            <h3>Gameplay:</h3>
+            <ul>
+                <li>The list of players is randomized and placed around the play zone.</li>
+                <li>All players will bounce around in the play zone.</li>
+                <li>Two players are selected right at the start.</li>
+                <li>The player shown at the top is the player that is on deck! Time to give your update!</li>
+                <li>The player shown below the current player is going to be up next.</li>
+            </ul>
+            <h3>Next Player:</h3>
+            <ul>
+                <li>Selects the person at the very top of the play zone screen to be added to the 'up next' position.</li>
+                <li>The current player will be removed from the round</li>
+                <li>The player in the 'up-next' position is moved to the Hero position to give their update.</li>
+            </ul>
+            <h3>Parking lot items (+PL):</h3>
+            <ul>
+                <li>Add anyting you want to discuss further after the round is complete.</li>
+                <li>If you click +PL the current player's name will be added to the parking lot area.</li>
+            </ul>
+            <h3>Reset:</h3>
+            <ul>
+                <li>Takes you back to the startup page and maintains the previous game setup.</li>
+                <li>Note!! This will fully reset the game in-progress and re-randomize all players.</li>
+            </ul>
+            <h3>Send Back:</h3>
+            <ul>
+                <li>Places the current player on deck at the bottom of the play screen. (Useful for people running late)</li>
+                <li>This does not change the order of final bosses unless they are already in the play zone.</li>
+            </ul>
         </div>
     </div>
 
