@@ -12,6 +12,7 @@ let finalBossesInputElement = document.getElementById("ta-bosses");
 let playerForm = document.getElementById("player-form");
 let selectMenu = document.getElementById("theme-select");
 let matrixBackground = document.getElementById("matrix-background");
+let isShowingHints = false;
 
 let players = new Players();
 let game;
@@ -132,4 +133,16 @@ function selectTheme() {
     document.getElementById("main-body").className = "";
     document.getElementById("main-body").classList.add(document.getElementById("theme-select").value);
     props.initTheme();
+}
+
+function showHideDescription() {
+    if (isShowingHints) {
+        document.getElementById("hint-content").style.display = "none";
+        document.getElementById("hint-button").innerText = "Show Description";
+        isShowingHints = false;
+    } else {
+        isShowingHints = true;
+        document.getElementById("hint-content").style.display = "block";
+        document.getElementById("hint-button").innerText = "Hide Description";
+    }
 }
